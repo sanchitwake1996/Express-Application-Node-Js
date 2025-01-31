@@ -1,4 +1,4 @@
 #!/bin/bash
-echo "Starting application..."
+pm2 stop all
 cd /home/ubuntu/app
-nohup npm start > output.log 2>&1 &
+pm2 start app.js
