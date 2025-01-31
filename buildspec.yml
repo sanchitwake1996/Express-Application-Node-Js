@@ -2,22 +2,15 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 18
     commands:
-      - echo Installing dependencies...
+      - echo Installing Node.js dependencies...
       - npm install
-
   build:
     commands:
-      - echo Running tests...
-      - echo Build completed successfully!
-
+      - echo Build phase complete
   post_build:
     commands:
-      - echo Packaging application...
-      - zip -r deploy.zip * .[^.]*
-
+      - echo Build successful
 artifacts:
   files:
-    - deploy.zip
+    - '**/*'
