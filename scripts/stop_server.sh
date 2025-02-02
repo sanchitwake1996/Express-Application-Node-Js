@@ -1,2 +1,3 @@
 #!/bin/bash
-pm2 stop all
+pm2 list
+pm2 stop all || echo "No PM2 processes to stop"
